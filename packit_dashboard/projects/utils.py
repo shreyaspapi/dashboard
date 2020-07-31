@@ -10,5 +10,4 @@ def all_from(url, method="GET", **kwargs):
         page = return_json(url_, method, **kwargs)
         if not page:
             break
-        for item in page:
-            yield item
+        yield from page
